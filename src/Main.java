@@ -1,3 +1,4 @@
+import javax.xml.crypto.Data;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -7,19 +8,12 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) {
 
-        String filename = "outputfile.txt";
+        Datawriter writer = new Datawriter("outputfile.txt");
 
-        System.out.println("Hello world");
+        writer.writeText("You can output a string quite easily");
+        writer.writeText("Adding another line for output");
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))){
-            writer.write("You can output a string quite easilty");
-            writer.newLine();
-            writer.write("Adding another line for output");
-
-            System.out.println("File written successfully");
-        } catch (IOException e){
-            e.printStackTrace();
+        System.out.println("File written successfully");
         }
 
     }
-}
