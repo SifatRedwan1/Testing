@@ -8,10 +8,11 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) {
 
-        Datawriter writer = new Datawriter("outputfile.txt");
+        DataWriter writer = new DataWriter();
 
-        writer.writeText("You can output a string quite easily");
-        writer.writeText("Adding another line for output");
+
+        writer.writeData("Outputfile.txt");
+
 
         System.out.println("File written successfully");
         }
